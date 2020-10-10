@@ -5,3 +5,45 @@
   #8d2ab5
   #74119c
 */
+
+html {
+  height: 100%;
+  font-size: 62.5%; /* 1rem = 10px, 10px/16px = 62.5% */
+}
+
+table {
+  table-layout: fixed;
+  margin: 0 auto;
+  max-width: 70rem;
+}
+
+#game-title {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+td {
+  height: 9rem;
+}
+
+/* td, th {
+  height: 3.5rem;
+    width: 3.5rem;
+  padding: 0;
+  width: 2rem;
+}
+
+td {
+  height: 9rem;
+} */
+
+/* .choco {
+  flex: 0 0 50px;
+  height: 50px;
+} */
+
+.cell {
+  height: 3.5rem;
+  width: 3.5rem;
+  padding: 0;
+}
