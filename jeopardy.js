@@ -35,9 +35,20 @@ let categories = [];
  */
 
 async function getCategoryIds() {
-    // const res = await axios.get('http://jservice.io//api/categories', {params: {count: 5}});
-    const res = await axios.get('http://jservice.io//api/categories');
-    console.log(res);
+    const response = await axios.get('http://jservice.io//api/categories', {params: {count: 5}});
+    const {data} = response;
+    // let categories = data.map((result) => {
+    //     let category = result;
+    //     return {
+
+    //     }
+    // });
+    let categoriesId = [];
+    for(let category of data) {
+        categoriesId.push(category.id);
+    }
+    
+    console.log(categoriesId);
 }
 
 /** Return object with data about a category:
@@ -52,13 +63,15 @@ async function getCategoryIds() {
  *   ]
  */
 
- // gives back 5 categories
-
  getCategoryIds();
 
 
-function getCategory(catId) {
+ async function getCategory(catId) {
+    const res = await axios.get('http://jservice.io//api/category', {params: {id: `${catId}`}});
+    console.log(res);
 }
+
+getCategory(11531);
 
 /** Fill the HTML table#jeopardy with the categories & cells for questions.
  *
