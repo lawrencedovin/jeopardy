@@ -10,13 +10,21 @@
 //    },
 //    { title: "Literature",
 //      clues: [
-//        {question: "Hamlet Author", answer: "Shakespeare", showing: null},
+//        {question: "Hamlet Author", answer: "Shakespearsse", showing: null},
 //        {question: "Bell Jar Author", answer: "Plath", showing: null},
 //        ...
 //      ],
 //    },
 //    ...
 //  ]
+
+// {
+//     "answer":"SEAL Team Six",
+//     "question":"Chris Pratt, goofy Andy on \"Parks and Recreation\", played one of the members of this elite group in \"zero dark thirty\"",
+//     "category":{
+//        "title":"celebs"
+//     }
+//  }
 
 let categories = [];
 
@@ -40,6 +48,14 @@ function getCategoryIds() {
  *      ...
  *   ]
  */
+
+ async function cat() {
+     const res = await axios.get('http://jservice.io//api/categories', {params {count: 5}});
+     console.log(res);
+ }
+
+ cat();
+
 
 function getCategory(catId) {
 }
@@ -95,4 +111,4 @@ async function setupAndStart() {
 
 /** On page load, add event handler for clicking clues */
 
-// TODO
+// TODOs
