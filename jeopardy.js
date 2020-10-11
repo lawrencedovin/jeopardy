@@ -34,7 +34,10 @@ let categories = [];
  * Returns array of category ids
  */
 
-function getCategoryIds() {
+async function getCategoryIds() {
+    // const res = await axios.get('http://jservice.io//api/categories', {params: {count: 5}});
+    const res = await axios.get('http://jservice.io//api/categories');
+    console.log(res);
 }
 
 /** Return object with data about a category:
@@ -49,12 +52,9 @@ function getCategoryIds() {
  *   ]
  */
 
- async function cat() {
-     const res = await axios.get('http://jservice.io//api/categories', {params {count: 5}});
-     console.log(res);
- }
+ // gives back 5 categories
 
- cat();
+ getCategoryIds();
 
 
 function getCategory(catId) {
