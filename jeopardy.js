@@ -87,15 +87,46 @@ async function idk() {
  */
 
 async function fillTable() {
-  // <h1 class="text-center" id="game-title">Jeopardy</h1>
-  let $title = $("<h1>");
+  const $title = $("<h1>");
   $title
     .addClass("text-center")
     .attr("id", "game-title")
     .text("Jeopardy");
   $("body").append($title);
 
-  
+  const $table = $("<table>").addClass("table table-bordered");
+  const $thead = $('<thead>');
+  const $theadrow = $('<tr>');
+  for(let i = 0; i < 5; i++) {
+      $theadrow.append('<th>title</th>');
+  }
+  // appending the same $th element
+  $("body").append($table.append($thead.append($theadrow)));
+
+//   $("body").append($table.append('peanuts'));    
+
+
+//   <table class="table table-bordered">
+//       <thead>
+//         <tr>
+//           <th>TOUGH-POURRI</th>
+//           <th>KIDS RULE</th>
+//           <th>LIGHTEN UP</th>
+//           <th>"HOT" STUFF</th>
+//           <th>PORT OF CALL</th>
+//           <th>WORDS FOR YOUNGSTERS</th>
+//         </tr>
+//       </thead>
+//       <tbody>
+//         <tr>
+//           <td>?</td>
+//           <td>?</td>
+//           <td>?</td>
+//           <td>?</td>
+//           <td>?</td>
+//           <td>?</td>
+//         </tr>
+
 }
 
 fillTable();
