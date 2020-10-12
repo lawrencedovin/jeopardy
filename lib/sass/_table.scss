@@ -8,13 +8,13 @@
     table-layout: fixed;
     margin: 0 auto;
     max-width: 80rem;
-    background: $color-primary;
+    background: $color-light-blue;
     tbody {
         tr {
             td {
                 @include table-data;
                 height: 9rem;
-                font-size: $font-size-primary;
+                font-size: $font-size-largest;
             }
         }
     }
@@ -22,7 +22,7 @@
         tr {
             th {
                 @include table-data;
-                font-size: $font-size-primary;
+                font-size: $font-size-medium;
             }
         }
     }

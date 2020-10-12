@@ -1,7 +1,7 @@
 // COLOR VARIABLES
-$color-primary: #7209bd;
+$color-light-blue: #3BB2E2;
 $color-white: #fff;
-$color-black: #000;
+$color-dark-blue: #011A53;
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
@@ -14,7 +14,9 @@ $bp-medium: 50em; // 800px / 16 = 50em
 $bp-small: 37.5em; // 600px / 16 = 37.5em
 
 // FONT SIZE
-$font-size-primary: 3rem;
+$font-size-largest: 3rem;
+$font-size-medium: 1.5rem;
+$font-size-smallest: 1rem;
 
 *,
 *::before,

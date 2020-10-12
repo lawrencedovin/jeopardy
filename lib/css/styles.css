@@ -14,7 +14,7 @@ html {
       font-size: 50%; } }
 
 #game-title {
-  color: #000;
+  color: #011A53;
   font-size: 3rem;
   margin: 3rem 0; }
 
@@ -22,7 +22,7 @@ html {
   table-layout: fixed;
   margin: 0 auto;
   max-width: 80rem;
-  background: #7209bd; }
+  background: #3BB2E2; }
   .table tbody tr td {
     color: #fff;
     text-align: center;
@@ -33,4 +33,4 @@ html {
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    font-size: 3rem; }
+    font-size: 1.5rem; }
