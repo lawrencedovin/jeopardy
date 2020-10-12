@@ -49,7 +49,10 @@ async function getCategoryIds() {
     }
     
     console.log(categoriesId);
+    //return categoriesId;
 }
+
+
 
 /** Return object with data about a category:
  *
@@ -67,11 +70,67 @@ async function getCategoryIds() {
 
 
  async function getCategory(catId) {
-    const res = await axios.get('http://jservice.io//api/category', {params: {id: `${catId}`}});
-    console.log(res);
+
+    const response = await axios.get('http://jservice.io//api/category', {params: {id: `${catId}`}});
+    const {clues} = response.data;
+
+    // CLUES WORKS WITH MAP BECAUSE IT IS AN OBJECT
+    // DATA DOESN'T WORK WITH MAP BECAUSE IT IS A SINGLE FIELD
+
+    let cate = clues.map((result) => {
+        let cat = result;
+        return {
+            title: catId,
+            clues: [
+                {question: cat.question, answer: cat.answer, showing: null}
+            ]
+        };
+    });
+
+    // let categories = data.map((result) => {
+    //     let category = result;
+    //     return {
+    //         title: category.title,
+    //         clues: [
+    //             {question: category.clues.question, answer: category.clues.answer, showing: null}
+    //         ]
+    //     };
+
+    // });
+    // console.log(catId) = 11531
+    // return catId = Promise
+    // In order to gain the Promise in the proper form it needs to be passed into an async function
+    console.log(cate);
+    // return categories;
 }
 
+// async function idk(evt) {
+//     let episodes = await getCategory(evt);
+//     console.log(episodes);
+// }
+
+// idk(11531);
+
 getCategory(11531);
+
+// async function test (){
+//     let cate = await getCategory(getCategoryIds());
+//     console.log(cate);
+// }
+
+// test();
+
+//    { title: "Math",
+//      clues: [
+//        {question: "2+2", answer: 4, showing: null},
+//        {question: "1+1", answer: 2, showing: null}
+//        ...
+//      ],
+//    },
+
+// 11531
+
+// getCategory(await getCategoryIds());
 
 /** Fill the HTML table#jeopardy with the categories & cells for questions.
  *
