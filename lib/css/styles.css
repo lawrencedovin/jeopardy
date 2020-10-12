@@ -27,6 +27,7 @@ html {
     color: #fff;
     text-align: center;
     vertical-align: middle;
+    border: 1px solid #011A53;
     height: 9rem; }
   .table tbody tr td:hover {
     cursor: pointer; }
@@ -34,10 +35,17 @@ html {
     color: #fff;
     text-align: center;
     vertical-align: middle;
+    border: 1px solid #011A53;
     font-size: 1.5rem; }
 
-.question {
+.question-mark {
   font-size: 3rem; }
 
-.clue {
+.question, .answer {
   font-size: 1rem; }
+
+.question {
+  background: #F9812A; }
+
+.answer {
+  background: #00FF73; }

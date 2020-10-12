@@ -2,6 +2,7 @@
     color: $color-white;
     text-align: center;
     vertical-align: middle;
+    border: 1px solid $color-dark-blue;
 }
 
 .table {
@@ -28,10 +29,18 @@
     }
 }
 
-.question {
+.question-mark {
     font-size: $font-size-largest;
 }
 
-.clue {
+.question, .answer {
     font-size: $font-size-smallest;
+}
+
+.question {
+    background: $color-orange;
+}
+
+.answer {
+    background: $color-green;
 }
