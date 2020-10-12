@@ -26,11 +26,13 @@ let categories = [];
  */
 
 async function getCategoryIds() {
-    const response = await axios.get('http://jservice.io//api/categories', {params: {count: 5}});
-    const {data} = response;
-    for(let category of data) {
-        categories.push(category.id);
-    }
+  const response = await axios.get("http://jservice.io//api/categories", {
+    params: { count: 5 },
+  });
+  const { data } = response;
+  for (let category of data) {
+    categories.push(category.id);
+  }
 }
 
 /** Return object with data about a category:
@@ -45,34 +47,35 @@ async function getCategoryIds() {
  *   ]
  */
 
- async function getCategory(catId) {
+async function getCategory(catId) {
+  const response = await axios.get("http://jservice.io//api/category", {
+    params: { id: `${catId}` },
+  });
+  const { data } = response;
+  const { clues } = data;
 
-    const response = await axios.get('http://jservice.io//api/category', {params: {id: `${catId}`}});
-    const {data} = response;
-    const {clues} = data; 
+  // CLUES WORKS WITH MAP BECAUSE IT IS AN OBJECT
+  // DATA DOESN'T WORK WITH MAP BECAUSE IT IS A SINGLE FIELD
 
-    // CLUES WORKS WITH MAP BECAUSE IT IS AN OBJECT
-    // DATA DOESN'T WORK WITH MAP BECAUSE IT IS A SINGLE FIELD
-
-    let categories = clues.map((result) => {
-        let title = data.title;
-        let category = result;
-        return {
-            title: title,
-            clues: [
-                {question: category.question, answer: category.answer, showing: null}
-            ]
-        };
-    });
-    return categories;
+  let categories = clues.map((result) => {
+    let title = data.title;
+    let category = result;
+    return {
+      title: title,
+      clues: [
+        { question: category.question, answer: category.answer, showing: null },
+      ],
+    };
+  });
+  return categories;
 }
 
 getCategoryIds();
 
 async function idk() {
-    for(let id of categories) {
-        console.log(await getCategory(id));
-    }
+  for (let id of categories) {
+    console.log(await getCategory(id));
+  }
 }
 
 /** Fill the HTML table#jeopardy with the categories & cells for questions.
@@ -84,8 +87,18 @@ async function idk() {
  */
 
 async function fillTable() {
+  // <h1 class="text-center" id="game-title">Jeopardy</h1>
+  let $title = $("<h1>");
+  $title
+    .addClass("text-center")
+    .attr("id", "game-title")
+    .text("Jeopardy");
+  $("body").append($title);
+
+  
 }
 
+fillTable();
 /** Handle clicking on a clue: show the question or answer.
  *
  * Uses .showing property on clue to determine what to show:
@@ -94,21 +107,17 @@ async function fillTable() {
  * - if currently "answer", ignore click
  * */
 
-function handleClick(evt) {
-}
+function handleClick(evt) {}
 
 /** Wipe the current Jeopardy board, show the loading spinner,
  * and update the button used to fetch data.
  */
 
-function showLoadingView() {
-
-}
+function showLoadingView() {}
 
 /** Remove the loading spinner and update the button used to fetch data. */
 
-function hideLoadingView() {
-}
+function hideLoadingView() {}
 
 /** Start game:
  *
@@ -117,8 +126,7 @@ function hideLoadingView() {
  * - create HTML table
  * */
 
-async function setupAndStart() {
-}
+async function setupAndStart() {}
 
 /** On click of start / restart button, set up game. */
 
