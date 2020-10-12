@@ -16,6 +16,7 @@
                 height: 9rem;
                 font-size: $font-size-largest;
             }
+            td:hover { cursor: pointer; }
         }
     }
     thead {
@@ -26,4 +27,8 @@
             }
         }
     }
+}
+
+.clue {
+    font-size: $font-size-smallest;
 }

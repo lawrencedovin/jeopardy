@@ -29,8 +29,13 @@ html {
     vertical-align: middle;
     height: 9rem;
     font-size: 3rem; }
+  .table tbody tr td:hover {
+    cursor: pointer; }
   .table thead tr th {
     color: #fff;
     text-align: center;
     vertical-align: middle;
     font-size: 1.5rem; }
+
+.clue {
+  font-size: 1rem; }
