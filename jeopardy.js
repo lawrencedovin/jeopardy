@@ -1,3 +1,6 @@
+const BASE_URL = "http://jservice.io/api/";
+const NUM_CATEGORIES = 6;
+const NUM_CLUES = 5;
 // categories is the main data structure for the app; it looks like this:
 
 //  [
@@ -26,7 +29,7 @@ let categories = [];
  */
 
 async function getCategoryIds() {
-  const response = await axios.get("http://jservice.io//api/categories", {
+  const response = await axios.get(`${BASE_URL}categories`, {
     params: { count: 5 },
   });
   const { data } = response;
@@ -48,7 +51,7 @@ async function getCategoryIds() {
  */
 
 async function getCategory(catId) {
-  const response = await axios.get("http://jservice.io//api/category", {
+  const response = await axios.get(`${BASE_URL}category`, {
     params: { id: `${catId}` },
   });
   const { data } = response;
@@ -87,8 +90,6 @@ async function idk() {
  */
 
 async function fillTable() {
-  const ROWS = 5;
-  const COLUMNS = 6;
   const $title = $("<h1>");
   $title
     .addClass("text-center")
@@ -101,19 +102,18 @@ async function fillTable() {
   const $theadrow = $('<tr>');
   const $tbody = $('<tbody>');
 
-  for(let i = 0; i < COLUMNS; i++) {
+  for(let i = 0; i < NUM_CATEGORIES; i++) {
       $theadrow.append('<th>title</th>');
   }
 
-  for(let i = 0; i < ROWS; i++) {
+  for(let i = 0; i < NUM_CLUES; i++) {
     let $tbodyrow = $('<tr>');
       $tbody.append($tbodyrow);
-    for(let j = 0; j < COLUMNS; j++) {
+    for(let j = 0; j < NUM_CATEGORIES; j++) {
         $tbodyrow.append('<td>?</td>');
     }
 }
 
-  // appending the same $th element
   $table.append($thead.append($theadrow));
   $table.append($tbody);
   $("body").append($table);
