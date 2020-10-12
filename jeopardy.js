@@ -18,16 +18,7 @@
 //    ...
 //  ]
 
-// {
-//     "answer":"SEAL Team Six",
-//     "question":"Chris Pratt, goofy Andy on \"Parks and Recreation\", played one of the members of this elite group in \"zero dark thirty\"",
-//     "category":{
-//        "title":"celebs"
-//     }
-//  }
-
 let categories = [];
-
 
 /** Get NUM_CATEGORIES random category from API.
  *
@@ -42,7 +33,6 @@ async function getCategoryIds() {
     }
 }
 
-
 /** Return object with data about a category:
  *
  *  Returns { title: "Math", clues: clue-array }
@@ -55,14 +45,11 @@ async function getCategoryIds() {
  *   ]
  */
 
-
-
-
  async function getCategory(catId) {
 
     const response = await axios.get('http://jservice.io//api/category', {params: {id: `${catId}`}});
     const {data} = response;
-    const {clues} = data;
+    const {clues} = data; 
 
     // CLUES WORKS WITH MAP BECAUSE IT IS AN OBJECT
     // DATA DOESN'T WORK WITH MAP BECAUSE IT IS A SINGLE FIELD
@@ -87,7 +74,6 @@ async function idk() {
         console.log(await getCategory(id));
     }
 }
-
 
 /** Fill the HTML table#jeopardy with the categories & cells for questions.
  *
