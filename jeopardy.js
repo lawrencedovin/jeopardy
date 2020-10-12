@@ -61,13 +61,14 @@ async function getCategoryIds() {
  async function getCategory(catId) {
 
     const response = await axios.get('http://jservice.io//api/category', {params: {id: `${catId}`}});
-    const {clues} = response.data;
+    const {data} = response;
+    const {clues} = data;
 
     // CLUES WORKS WITH MAP BECAUSE IT IS AN OBJECT
     // DATA DOESN'T WORK WITH MAP BECAUSE IT IS A SINGLE FIELD
 
     let categories = clues.map((result) => {
-        let title = response.data.title;
+        let title = data.title;
         let category = result;
         return {
             title: title,
