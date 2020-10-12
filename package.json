@@ -4,16 +4,7 @@
   "description": "Jeopardy game in jQuery",
   "main": "jeopardy.js",
   "scripts": {
-    // "compile:sass": "node-sass lib/sass/main.scss lib/css/styles.css -w"
-    
-
-    // "watch:sass": "node-sass lib/sass/main.scss lib/css/style.css -w",
-    // "devserver": "live-server",
-    // "start": "npm-run-all --parallel devserver watch:sass",
-    // "compile:sass": "node-sass lib/sass/main.scss lib/css/styles.comp.css",
-    // "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
-    // "compress:css": "node-sass lib/css/styles.prefix.css lib/css/styles.css --output-style compressed",
-    // "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "watch:sass": "node-sass lib/sass/main.scss lib/css/styles.css"
   },
   "repository": {
     "type": "git",
