@@ -87,6 +87,8 @@ async function idk() {
  */
 
 async function fillTable() {
+  const ROWS = 5;
+  const COLUMNS = 6;
   const $title = $("<h1>");
   $title
     .addClass("text-center")
@@ -97,36 +99,24 @@ async function fillTable() {
   const $table = $("<table>").addClass("table table-bordered");
   const $thead = $('<thead>');
   const $theadrow = $('<tr>');
-  for(let i = 0; i < 5; i++) {
+  const $tbody = $('<tbody>');
+
+  for(let i = 0; i < COLUMNS; i++) {
       $theadrow.append('<th>title</th>');
   }
+
+  for(let i = 0; i < ROWS; i++) {
+    let $tbodyrow = $('<tr>');
+      $tbody.append($tbodyrow);
+    for(let j = 0; j < COLUMNS; j++) {
+        $tbodyrow.append('<td>?</td>');
+    }
+}
+
   // appending the same $th element
-  $("body").append($table.append($thead.append($theadrow)));
-
-//   $("body").append($table.append('peanuts'));    
-
-
-//   <table class="table table-bordered">
-//       <thead>
-//         <tr>
-//           <th>TOUGH-POURRI</th>
-//           <th>KIDS RULE</th>
-//           <th>LIGHTEN UP</th>
-//           <th>"HOT" STUFF</th>
-//           <th>PORT OF CALL</th>
-//           <th>WORDS FOR YOUNGSTERS</th>
-//         </tr>
-//       </thead>
-//       <tbody>
-//         <tr>
-//           <td>?</td>
-//           <td>?</td>
-//           <td>?</td>
-//           <td>?</td>
-//           <td>?</td>
-//           <td>?</td>
-//         </tr>
-
+  $table.append($thead.append($theadrow));
+  $table.append($tbody);
+  $("body").append($table);
 }
 
 fillTable();
