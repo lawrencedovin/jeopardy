@@ -14,7 +14,6 @@
             td {
                 @include table-data;
                 height: 9rem;
-                font-size: $font-size-largest;
             }
             td:hover { cursor: pointer; }
         }
@@ -27,6 +26,10 @@
             }
         }
     }
+}
+
+.question {
+    font-size: $font-size-largest;
 }
 
 .clue {
