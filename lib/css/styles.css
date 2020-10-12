@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px, 10px/16px = 62.5% */ }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+#game-title {
+  color: #000;
+  font-size: 3rem;
+  margin: 3rem 0; }
+
+.table {
+  table-layout: fixed;
+  margin: 0 auto;
+  max-width: 80rem;
+  background: #7209bd; }
+  .table tbody tr td {
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    height: 9rem;
+    font-size: 3rem; }
+  .table thead tr th {
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 3rem; }

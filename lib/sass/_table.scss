@@ -1,0 +1,29 @@
+@mixin table-data {
+    color: $color-white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table {
+    table-layout: fixed;
+    margin: 0 auto;
+    max-width: 80rem;
+    background: $color-primary;
+    tbody {
+        tr {
+            td {
+                @include table-data;
+                height: 9rem;
+                font-size: $font-size-primary;
+            }
+        }
+    }
+    thead {
+        tr {
+            th {
+                @include table-data;
+                font-size: $font-size-primary;
+            }
+        }
+    }
+}
