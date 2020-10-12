@@ -37,23 +37,10 @@ let categories = [];
 async function getCategoryIds() {
     const response = await axios.get('http://jservice.io//api/categories', {params: {count: 5}});
     const {data} = response;
-    // let categories = data.map((result) => {
-    //     let category = result;
-    //     return {
-
-    //     }
-    // });
-    // let categoriesId = [];
     for(let category of data) {
         categories.push(category.id);
     }
-    
-    // console.log(categories);
-    //return categoriesId;
 }
-
-// getCategoryIds();
-// console.log(categories);
 
 
 /** Return object with data about a category:
@@ -68,60 +55,37 @@ async function getCategoryIds() {
  *   ]
  */
 
- getCategoryIds();
- console.log(categories);
+
 
 
  async function getCategory(catId) {
 
     const response = await axios.get('http://jservice.io//api/category', {params: {id: `${catId}`}});
     const {clues} = response.data;
-    //const {data} = response;
-    // let title = response.data.title;
 
     // CLUES WORKS WITH MAP BECAUSE IT IS AN OBJECT
     // DATA DOESN'T WORK WITH MAP BECAUSE IT IS A SINGLE FIELD
 
-    let cate = clues.map((result) => {
+    let categories = clues.map((result) => {
         let title = response.data.title;
-        let cat = result;
+        let category = result;
         return {
             title: title,
             clues: [
-                {question: cat.question, answer: cat.answer, showing: null}
+                {question: category.question, answer: category.answer, showing: null}
             ]
         };
     });
-
-    // let cate = response.map((result) => {
-    //     let cat = result;
-    //     return {
-    //         title: cat.data.title,
-    //         clues: [
-    //             {question: cat.data.clues.question, answer: cat.data.clues.answer, showing: null}
-    //         ]
-    //     };
-    // });
-
-    // let categories = data.map((result) => {
-    //     let category = result;
-    //     return {
-    //         title: category.title,
-    //         clues: [
-    //             {question: category.clues.question, answer: category.clues.answer, showing: null}
-    //         ]
-    //     };
-
-    // });
-    // console.log(catId) = 11531
-    // return catId = Promise
-    // In order to gain the Promise in the proper form it needs to be passed into an async function
-    // console.log(cate);
-    return cate;
-    // return categories;
+    return categories;
 }
 
-getCategory(11531);
+getCategoryIds();
+
+async function idk() {
+    for(let id of categories) {
+        console.log(await getCategory(id));
+    }
+}
 
 
 /** Fill the HTML table#jeopardy with the categories & cells for questions.
