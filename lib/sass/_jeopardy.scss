@@ -7,9 +7,10 @@
 
 .table {
     table-layout: fixed;
-    margin: 0 auto;
+    margin: 3rem auto 0;
     max-width: 80rem;
     background: $color-light-blue;
+    
 
     tbody {
         tr {
@@ -55,7 +56,3 @@
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
 }
-
-// button {
-//     margin: 0 auto;
-// }
