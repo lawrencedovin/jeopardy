@@ -14,11 +14,6 @@ html {
     html {
       font-size: 50%; } }
 
-#game-title {
-  color: #fff;
-  font-size: 3rem;
-  margin: 3rem 0; }
-
 .table {
   table-layout: fixed;
   margin: 0 auto;
