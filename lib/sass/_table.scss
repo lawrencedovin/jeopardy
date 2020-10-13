@@ -33,14 +33,12 @@
     font-size: $font-size-largest;
 }
 
-.question, .answer {
-    font-size: $font-size-smallest;
-}
-
 .question {
+    font-size: $font-size-smallest;
     background: $color-orange;
 }
 
 .answer {
+    font-size: $font-size-medium;
     background: $color-green;
 }

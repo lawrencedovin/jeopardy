@@ -41,11 +41,10 @@ html {
 .question-mark {
   font-size: 3rem; }
 
-.question, .answer {
-  font-size: 1rem; }
-
 .question {
+  font-size: 1rem;
   background: #F9812A; }
 
 .answer {
+  font-size: 1.5rem;
   background: #00FF73; }
