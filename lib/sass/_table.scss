@@ -10,15 +10,20 @@
     margin: 0 auto;
     max-width: 80rem;
     background: $color-light-blue;
+
     tbody {
         tr {
             td {
                 @include table-data;
                 height: 9rem;
             }
-            td:hover { cursor: pointer; }
+
+            td:hover {
+                cursor: pointer;
+            }
         }
     }
+
     thead {
         tr {
             th {
@@ -43,6 +48,14 @@
     background: $color-green;
 }
 
-button {
-    margin: 0 auto;
+.button-container {
+    position: absolute;
+    top: 55rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
 }
+
+// button {
+//     margin: 0 auto;
+// }
