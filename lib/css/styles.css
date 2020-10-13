@@ -6,12 +6,28 @@
   box-sizing: inherit; }
 
 html {
+  max-height: 100vh; }
+
+body {
+  height: 100%; }
+
+html {
   box-sizing: border-box;
   font-size: 62.5%;
   /* 1rem = 10px, 10px/16px = 62.5% */ }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; }
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Firefox */ }
 
 #game-title {
   color: #011A53;
@@ -20,8 +36,8 @@ html {
 
 .table {
   table-layout: fixed;
-  margin: 3rem auto 0;
-  max-width: 80rem;
+  margin: 0 auto;
+  max-width: 100%;
   background: #3BB2E2; }
   .table tbody tr td {
     color: #fff;
@@ -55,3 +71,6 @@ html {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%); }
+  @media only screen and (max-width: 37.5em) {
+    .button-container {
+      top: 60rem; } }

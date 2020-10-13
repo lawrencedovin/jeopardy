@@ -4,7 +4,7 @@
   "description": "Jeopardy game in jQuery",
   "main": "jeopardy.js",
   "scripts": {
-    "watch:sass": "node-sass lib/sass/main.scss lib/css/styles.css"
+    "watch:sass": "node-sass lib/sass/main.scss lib/css/styles.css -w"
   },
   "repository": {
     "type": "git",

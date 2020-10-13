@@ -7,8 +7,9 @@
 
 .table {
     table-layout: fixed;
-    margin: 3rem auto 0;
-    max-width: 80rem;
+    // margin: 3rem auto 0;
+    margin: 0 auto;
+    max-width: 100%;
     background: $color-light-blue;
     
 
@@ -54,5 +55,9 @@
     top: 55rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+
+    @media only screen and (max-width: $bp-small) {
+        top: 60rem;
+    }
 }
