@@ -2,7 +2,7 @@
     color: $color-white;
     text-align: center;
     vertical-align: middle;
-    border: 1px solid $color-dark-blue;
+    border: 2px solid $color-dark-blue;
 }
 
 .table {
@@ -12,7 +12,7 @@
     max-width: 100%;
     background: $color-light-blue;
     font-family: $font-primary;
-    
+
 
     tbody {
         tr {
@@ -33,6 +33,8 @@
                 @include table-data;
                 font-size: $font-size-medium;
                 text-transform: uppercase;
+                text-shadow: 1px 1px $color-green-blue, 2px 2px $color-green-blue, 3px 3px $color-green-blue;
+                padding: 1rem 0;
             }
         }
     }
