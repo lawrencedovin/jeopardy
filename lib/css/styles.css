@@ -48,3 +48,6 @@ html {
 .answer {
   font-size: 1.5rem;
   background: #00FF73; }
+
+button {
+  margin: 0 auto; }
