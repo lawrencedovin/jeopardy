@@ -11,6 +11,7 @@
     margin: 0 auto;
     max-width: 100%;
     background: $color-light-blue;
+    font-family: $font-primary;
     
 
     tbody {
@@ -31,6 +32,7 @@
             th {
                 @include table-data;
                 font-size: $font-size-medium;
+                text-transform: uppercase;
             }
         }
     }
@@ -44,17 +46,13 @@
     font-size: $font-size-largest;
 }
 
-.question, .answer {
-    font-size: $font-size-medium;
-}
-
 .question {
-    // font-size: $font-size-medium;
+    font-size: $font-size-smallest;
     background: $color-orange;
 }
 
 .answer {
-    // font-size: $font-size-medium;
+    font-size: $font-size-medium;
     background: $color-green;
 }
 

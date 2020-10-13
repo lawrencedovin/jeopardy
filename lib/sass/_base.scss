@@ -6,7 +6,7 @@ $color-orange: #F9812A;
 $color-green: #00FF73;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
+$font-primary: 'B612', sans-serif;
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px / 16 = 75em
@@ -17,7 +17,7 @@ $bp-small: 37.5em; // 600px / 16 = 37.5em
 // FONT SIZE
 $font-size-largest: 3rem;
 $font-size-medium: 1.5rem;
-$font-size-smallest: 1rem;
+$font-size-smallest: 1.25rem;
 
 *,
 *::before,
@@ -28,16 +28,9 @@ $font-size-smallest: 1rem;
 }
 
 html {
-    max-height: 100vh;
-}
-
-body {
-    height: 100%;
-}
-
-html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1rem = 10px, 10px/16px = 62.5% */
+    max-height: 100vh;
 
     @media only screen and (max-width: $bp-largest) {
         font-size: 50%;
