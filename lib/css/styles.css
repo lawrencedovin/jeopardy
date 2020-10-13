@@ -54,15 +54,19 @@ html {
     border: 1px solid #011A53;
     font-size: 1.5rem; }
 
+#loadingDiv {
+  margin-top: 24rem; }
+
 .question-mark {
   font-size: 3rem; }
 
+.question, .answer {
+  font-size: 1.5rem; }
+
 .question {
-  font-size: 1rem;
   background: #F9812A; }
 
 .answer {
-  font-size: 1.5rem;
   background: #00FF73; }
 
 .button-container {

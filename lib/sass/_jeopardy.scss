@@ -36,17 +36,25 @@
     }
 }
 
+#loadingDiv {
+    margin-top: 24rem;
+}
+
 .question-mark {
     font-size: $font-size-largest;
 }
 
+.question, .answer {
+    font-size: $font-size-medium;
+}
+
 .question {
-    font-size: $font-size-smallest;
+    // font-size: $font-size-medium;
     background: $color-orange;
 }
 
 .answer {
-    font-size: $font-size-medium;
+    // font-size: $font-size-medium;
     background: $color-green;
 }
 
