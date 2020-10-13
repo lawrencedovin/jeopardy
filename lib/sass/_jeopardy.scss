@@ -2,15 +2,14 @@
     color: $color-white;
     text-align: center;
     vertical-align: middle;
-    border: 2px solid $color-dark-blue;
+    border: 4px solid #000;
 }
 
 .table {
     table-layout: fixed;
-    // margin: 3rem auto 0;
     margin: 0 auto;
     max-width: 100%;
-    background: $color-light-blue;
+    background: $color-primary-blue;
     font-family: $font-primary;
 
 
@@ -24,6 +23,20 @@
             td:hover {
                 cursor: pointer;
             }
+
+            .question-mark {
+                font-size: $font-size-largest;
+                color: $color-yellow;
+                text-shadow: 1px 1px $color-black, 2px 2px $color-black, 3px 3px $color-black;
+            }
+
+            .question {
+                font-size: $font-size-smallest;
+            }
+
+            .answer {
+                font-size: $font-size-medium;
+            }
         }
     }
 
@@ -33,7 +46,6 @@
                 @include table-data;
                 font-size: $font-size-medium;
                 text-transform: uppercase;
-                text-shadow: 1px 1px $color-green-blue, 2px 2px $color-green-blue, 3px 3px $color-green-blue;
                 padding: 1rem 0;
             }
         }
@@ -42,20 +54,6 @@
 
 #loadingDiv {
     margin-top: 24rem;
-}
-
-.question-mark {
-    font-size: $font-size-largest;
-}
-
-.question {
-    font-size: $font-size-smallest;
-    background: $color-orange;
-}
-
-.answer {
-    font-size: $font-size-medium;
-    background: $color-green;
 }
 
 .button-container {
@@ -67,5 +65,14 @@
 
     @media only screen and (max-width: $bp-small) {
         top: 60rem;
+    }
+
+    #reset-button,
+    #reset-button:active,
+    #reset-button:focus {
+        background: $color-primary-blue;
+        border: none;
+        outline: none;
+        box-shadow: none;
     }
 }

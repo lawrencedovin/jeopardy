@@ -25,7 +25,7 @@ html {
   /* Firefox */ }
 
 #game-title {
-  color: #011A53;
+  color: #fff;
   font-size: 3rem;
   margin: 3rem 0; }
 
@@ -33,39 +33,35 @@ html {
   table-layout: fixed;
   margin: 0 auto;
   max-width: 100%;
-  background: #3BB2E2;
+  background: #08107F;
   font-family: "B612", sans-serif; }
   .table tbody tr td {
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    border: 2px solid #011A53;
+    border: 4px solid #000;
     height: 9rem; }
   .table tbody tr td:hover {
     cursor: pointer; }
+  .table tbody tr .question-mark {
+    font-size: 3rem;
+    color: #F7C600;
+    text-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000; }
+  .table tbody tr .question {
+    font-size: 1.25rem; }
+  .table tbody tr .answer {
+    font-size: 1.5rem; }
   .table thead tr th {
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    border: 2px solid #011A53;
+    border: 4px solid #000;
     font-size: 1.5rem;
     text-transform: uppercase;
-    text-shadow: 1px 1px #117a8b, 2px 2px #117a8b, 3px 3px #117a8b;
     padding: 1rem 0; }
 
 #loadingDiv {
   margin-top: 24rem; }
-
-.question-mark {
-  font-size: 3rem; }
-
-.question {
-  font-size: 1.25rem;
-  background: #F9812A; }
-
-.answer {
-  font-size: 1.5rem;
-  background: #00FF73; }
 
 .button-container {
   position: absolute;
@@ -76,3 +72,10 @@ html {
   @media only screen and (max-width: 37.5em) {
     .button-container {
       top: 60rem; } }
+  .button-container #reset-button,
+  .button-container #reset-button:active,
+  .button-container #reset-button:focus {
+    background: #08107F;
+    border: none;
+    outline: none;
+    box-shadow: none; }
